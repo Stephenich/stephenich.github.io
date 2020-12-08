@@ -1,0 +1,15 @@
+{
+  "name": "stephenich.github.io",
+  "version": "1.0.0",
+  "description": "Bit of fun building stuff",
+  "main": "index.js",
+  "repository": "git@github.com:Stephenich/stephenich.github.io.git",
+  "author": "Stephenich <sma.gurney@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:html": "cp ./src/index.html ./docs/index.html",
+    "build": "yarn clean:docs && mkdir ./docs && yarn build:html",
+    "clean:docs": "rm -rf ./docs"
+  }
+  
+}
