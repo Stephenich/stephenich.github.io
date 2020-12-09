@@ -1,0 +1,6 @@
+p {
+    color: red;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
