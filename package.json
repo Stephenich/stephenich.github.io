@@ -8,11 +8,16 @@
   "license": "MIT",
   "scripts": {
     "build:css": "postcss ./src/css/main.css -o ./docs/css/main.css",
+    "build:js": "babel ./src/js/main.js -o ./docs/js/main.js",
     "build:html": "cp ./src/index.html ./docs/index.html",
-    "build": "yarn clean:docs && mkdir ./docs && yarn build:html && yarn build:css",
+    "build": "yarn clean:docs && mkdir ./docs && yarn build:html && yarn build:css && yarn build:js",
     "clean:docs": "rm -rf ./docs"
   },
   "dependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
     "autoprefixer": "^10.1.0",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.0"
