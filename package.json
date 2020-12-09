@@ -7,10 +7,11 @@
   "author": "Stephenich <sma.gurney@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build:images": "cp -R ./src/images ./docs/images",
     "build:css": "postcss ./src/css/main.css -o ./docs/css/main.css",
     "build:js": "babel ./src/js/main.js -o ./docs/js/main.js",
     "build:html": "cp ./src/index.html ./docs/index.html",
-    "build": "yarn clean:docs && mkdir ./docs && yarn build:html && yarn build:css && yarn build:js",
+    "build": "yarn clean:docs && mkdir ./docs && yarn build:html && yarn build:css && yarn build:js && yarn build:images",
     "clean:docs": "rm -rf ./docs"
   },
   "dependencies": {
