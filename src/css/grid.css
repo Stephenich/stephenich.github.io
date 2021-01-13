@@ -1,0 +1,94 @@
+.container {
+    display: grid;
+    /* background-color: blue; */
+    /* gap: 5px; */
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas: 
+    "top    top     top"
+    "nav    nav     nav"
+    "midl   midm    midr"
+    "bot    bot     bot"  ;
+    grid-template-rows: 66px 48px 1fr 48px;
+    grid-template-columns: 72px 1fr 72px;
+}
+
+.site {
+    /* background-color:yellow; */
+}
+
+.header-row {
+    background-color: #f0f0f0;
+    grid-area: top;
+}
+
+.primary-header {
+    font-size: 24px;
+    float: left;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.logo {
+    float: right;
+    padding: 16px;
+}
+
+.navbar {
+    background-color: #c0c0c0;
+    grid-area: nav;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 16px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.li {
+    display: inline;
+    padding-left: 16px;
+}
+
+.left-space {
+    grid-area: midl;
+}
+
+.main{
+    grid-area: midm;
+    padding-top: 20px;
+}
+
+.heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 16px;
+}
+
+.right-space{
+    grid-area: midr;
+}
+
+.footer{
+    background-color: #c0c0c0;
+    grid-area: bot;
+}
+
+.copyright {
+    float: left;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.right-link {
+    float: right;
+    padding-top: 16px;
+    padding-right: 16px;
+}
