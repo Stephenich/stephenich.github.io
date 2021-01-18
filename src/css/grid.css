@@ -86,11 +86,88 @@ ul {
       "nav    nav     nav"
       "midl   midm    midr"
       "bot    bot     bot";
+}
+
+.header-row {
+    grid-area: top;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.primary-header {
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+.navbar {
+    background-color: #c0c0c0;
+    grid-area: nav;
+}
+
+ul {
+    list-style-type: none;
+    padding: 8px;
+    text-align: center
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.li {
+    display: inline;
+    padding: 8px;
+
+}
+
+.main {
+    grid-area: mid;
+    background-color: white;
+    margin: 1%;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.content {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.footer {
+    grid-area: bot;
+    background-color: #c0c0c0;
+    display: block;
+    text-align: center;
+}
+}
+@media (min-width: 1025px){
+.container { 
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas: 
+    "top    top     top"
+    "nav    nav     nav"
+    "midl   midm    midr"
+    "bot    bot     bot"  ;
     grid-template-rows: 66px 48px 1fr 48px;
     grid-template-columns: 74px 1fr 70px;
   }
 
-  .header-row {
+
+.header-row {
     background-color: #f0f0f0;
     grid-area: top;
   }
@@ -196,7 +273,6 @@ ul {
 
   .logo {
     float: right;
-    padding: 16px;
   }
 
   .navbar {
