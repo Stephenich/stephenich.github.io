@@ -1,15 +1,91 @@
 .container {
-    display: grid;
-    /* background-color: blue; */
-    /* gap: 5px; */
-    min-height: 100vh;
-    grid-template-areas: 
+  display: grid;
+  /* background-color: blue; */
+  /* gap: 5px; */
+  min-height: 100vh;
+  grid-template-areas:
     "top"
     "nav"
     "mid"
-    "bot" ;
-    grid-template-rows: auto;
-    grid-template-columns: auto ;
+    "bot";
+  grid-template-rows: 8% 4% 1fr 4%;
+  grid-template-columns: auto;
+}
+
+.header-row {
+  grid-area: top;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.primary-header {
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.navbar {
+  background-color: #c0c0c0;
+  grid-area: nav;
+}
+
+ul {
+  list-style-type: none;
+  padding: 8px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.li {
+  display: inline;
+  padding: 8px;
+}
+
+.main {
+  grid-area: mid;
+  background-color: white;
+  margin: 1%;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.content {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.footer {
+  grid-area: bot;
+  background-color: #c0c0c0;
+  display: block;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background-color: blue; */
+    /* gap: 5px; */
+    grid-template-areas:
+      "top    top     top"
+      "nav    nav     nav"
+      "midl   midm    midr"
+      "bot    bot     bot";
 }
 
 .header-row {
@@ -75,7 +151,7 @@ ul {
     display: block;
     text-align: center;
 }
-
+}
 @media (min-width: 1025px){
 .container { 
     display: grid;
@@ -87,83 +163,173 @@ ul {
     "midl   midm    midr"
     "bot    bot     bot"  ;
     grid-template-rows: 66px 48px 1fr 48px;
-    grid-template-columns: 72px 1fr 72px;
-}
+    grid-template-columns: 74px 1fr 70px;
+  }
+
 
 .header-row {
     background-color: #f0f0f0;
     grid-area: top;
-}
+  }
 
-.primary-header {
+  .primary-header {
     font-size: 24px;
     float: left;
     padding-left: 16px;
-    padding-top: 16px;
-}
+    padding-top: 12px;
+  }
 
-.logo {
-    float: right; 
-    padding: 16px;
-}
+  .logo {
+    float: right;
+    padding-right: 16px;
+    padding-top: 12px;
+  }
 
-.navbar {
+  .navbar {
     background-color: #c0c0c0;
     grid-area: nav;
-}
+  }
 
-ul {
+  ul {
     list-style-type: none;
-    padding-top: 16px;
-}
+    padding-top: 8px;
+  }
 
-.link {
+  .link {
     text-decoration: none;
     color: black;
-}
+  }
 
-.li {
+  .li {
     display: inline;
     padding-left: 16px;
-}
+    float: left;
+  }
 
-.left-space {
+  .left-space {
     grid-area: midl;
-}
+  }
 
-.main{
+  .main {
     grid-area: midm;
     padding-top: 20px;
-}
+  }
 
-.heading{
+  .heading {
     font-size: 18px;
     font-weight: bold;
-}
+  }
 
-.content {
+  .content {
     margin-top: 16px;
-}
+  }
 
-.right-space{
+  .right-space {
     grid-area: midr;
-}
+  }
 
-.footer{
+  .footer {
     background-color: #c0c0c0;
     grid-area: bot;
-}
+  }
 
-.copyright {
+  .copyright {
     float: left;
     padding-left: 16px;
     padding-top: 16px;
-}
+  }
 
-.right-link {
+  .right-link {
     float: right;
     padding-top: 16px;
     padding-right: 16px;
+  }
 }
+@media (min-width: 1025px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas:
+      "top    top     top"
+      "nav    nav     nav"
+      "midl   midm    midr"
+      "bot    bot     bot";
+    grid-template-rows: 66px 48px 1fr 48px;
+    grid-template-columns: 70px 1fr 70px;
+  }
 
+  .header-row {
+    background-color: #f0f0f0;
+    grid-area: top;
+  }
+
+  .primary-header {
+    font-size: 24px;
+    float: left;
+    padding-left: 16px;
+    padding-top: 12px;
+  }
+
+  .logo {
+    float: right;
+  }
+
+  .navbar {
+    background-color: #c0c0c0;
+    grid-area: nav;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .li {
+    display: inline;
+    padding-left: 16px;
+  }
+
+  .left-space {
+    grid-area: midl;
+  }
+
+  .main {
+    grid-area: midm;
+    padding-top: 20px;
+  }
+
+  .heading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .content {
+    margin-top: 16px;
+  }
+
+  .right-space {
+    grid-area: midr;
+  }
+
+  .footer {
+    background-color: #c0c0c0;
+    grid-area: bot;
+  }
+
+  .copyright {
+    float: left;
+    padding-left: 16px;
+    padding-top: 16px;
+  }
+
+  .right-link {
+    float: right;
+    padding-top: 16px;
+    padding-right: 16px;
+  }
 }
